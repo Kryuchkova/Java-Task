@@ -4,29 +4,18 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        Scanner scanner=new Scanner(System.in);
-        int x, y, z;
-        System.out.println("Enter three integers:");
+        double principal;  // the value of the investment
+        double rate;       // the annual interest rate
+        double interest;   // the interest earned during the year
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the initial investment: ");
+        principal = scanner.nextDouble();
 
-        x = scanner.nextInt();
-        y = scanner.nextInt();
-        z = scanner.nextInt();
+        System.out.println("Enter the annual interest rate: ");
+        rate = scanner.nextDouble();
 
-        if (x > y && x > z)
-        {
-            System.out.println("First number is largest.");
-        }
-        else if  (y > x && y > z)
-        {
-            System.out.println("Second number is largest.");
-        }
-        else if  (z > x && z > y)
-        {
-            System.out.println("Third number is largest.");
-        }
-        else if  (y >= x && y >= z || x >= y && x >= z || z >= x && z >= y)
-        {
-            System.out.println("Entered numbers are not distinct.");
-        }
+        principal += principal * rate / 100;
+
+        System.out.println("The value of the investment after one year is: "+principal);
     }
 }
