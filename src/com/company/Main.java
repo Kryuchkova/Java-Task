@@ -4,19 +4,12 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the year to be checked: ");
-        int year = scanner.nextInt();
-        boolean isLeapYear;
+        System.out.println("Enter a temperature in Celsius: ");
+        Scanner scanCelsius = new Scanner(System.in);
+        double Fahrenheit = 0;
+        int Celsius = scanCelsius.nextInt();
+        Fahrenheit = Celsius * 1.8 + 32.0;
 
-        if (year % 400 == 0 || year % 100 != 0 && year % 4 == 0)
-        {
-            isLeapYear = true;
-        }
-        else
-        {
-            isLeapYear = false;
-        }
-        System.out.println(isLeapYear);
+        System.out.println("The temperature in Fahrenheit is: " + Fahrenheit);
     }
 }
