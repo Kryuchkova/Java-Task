@@ -16,6 +16,6 @@ public class Main {
         System.out.print("The result of multiplying is ");
         System.out.println(a * b);
         System.out.print("The result of dividing is ");
-        System.out.println((float)(a / b));
+        System.out.println((float) a / b);
     }
 }
